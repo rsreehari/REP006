@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Stacking App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header fade-in">
+      <h1>Photo Stacking App</h1>
+      <p>Scan, upload, and preview photos seamlessly.</p>
+    </div>
+
+    <!-- QR Scanner Section -->
+    <div class="qr-section fade-in">
+      <h2>Scan QR Code to Upload Photos</h2>
+      <video id="qr-video"></video>
+      <button id="scan-btn">Start Scanning</button>
+    </div>
+
+    <!-- Photo Preview Section -->
+    <div class="photo-preview fade-in">
+      <h2>Photo Preview</h2>
+      <div class="photo-grid">
+        <!-- Example Photo Items -->
+        <div class="photo-item">
+          <img src="https://via.placeholder.com/200" alt="Photo 1">
+        </div>
+        <div class="photo-item">
+          <img src="https://via.placeholder.com/200" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+          <img src="https://via.placeholder.com/200" alt="Photo 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="upload-section fade-in">
+      <input type="file" id="file-upload" accept="image/*" multiple>
+      <label for="file-upload">Upload Photos</label>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer fade-in">
+      <p>&copy; 2025 Photo Stacking App. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for QR Scanning and File Upload
+    const scanBtn = document.getElementById('scan-btn');
+    const qrVideo = document.getElementById('qr-video');
+    const fileUpload = document.getElementById('file-upload');
+
+    // QR Scanner (Example using jsQR)
+    scanBtn.addEventListener('click', () => {
+      alert('QR Scanning functionality will be implemented here.');
+    });
+
+    // File Upload
+    fileUpload.addEventListener('change', (e) => {
+      const files = e.target.files;
+      alert(`${files.length} file(s) selected for upload.`);
+    });
+  </script>
+</body>
+</html>
